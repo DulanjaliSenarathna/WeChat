@@ -1,6 +1,7 @@
 package com.example.wechat.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.wechat.MessageActivity;
 import com.example.wechat.Model.Users;
 import com.example.wechat.R;
 
@@ -42,7 +44,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        Users users=mUsers.get(position);
+        final Users users=mUsers.get(position);
         holder.username.setText(users.getUsername());
 
         if(users.getImageURL().equals("default")){
@@ -55,6 +57,15 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
                     .into(holder.imageView);
 
         }
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(context, MessageActivity.class);
+                i.putExtra("userid", users.getId());
+                context.startActivity(i);
+            }
+        });
 
     }
 
