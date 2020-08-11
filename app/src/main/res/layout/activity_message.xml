@@ -55,7 +55,7 @@
 
 
     <EditText
-
+        android:hint="Type a Message"
         android:id="@+id/text_send"
         android:layout_width="300dp"
         android:layout_height="43dp"
