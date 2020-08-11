@@ -14,6 +14,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.wechat.Fragments.ChatFragment;
+import com.example.wechat.Fragments.ProfileFragment;
 import com.example.wechat.Fragments.UsersFragment;
 import com.example.wechat.Model.Users;
 import com.google.android.material.tabs.TabLayout;
@@ -62,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
 
         viewPagerAdapter.addFragment(new ChatFragment(),"Chats");
         viewPagerAdapter.addFragment(new UsersFragment(),"Users");
+        viewPagerAdapter.addFragment(new ProfileFragment(),"Profile");
 
         viewPager.setAdapter(viewPagerAdapter);
 
