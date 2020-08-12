@@ -7,6 +7,34 @@
     android:orientation="vertical">
 
     <ImageView
+        android:id="@+id/statusimageON"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/imageView30"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/gradient_register"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/statusimageOFF"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginBottom="28dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/imageView30"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/statusimageON"
+
+        app:srcCompat="@drawable/gradient_register" />
+
+    <ImageView
         android:id="@+id/imageView30"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
