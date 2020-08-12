@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
-        myRef = FirebaseDatabase.getInstance().getReference("Users").child(firebaseUser.getUid());
+        myRef = FirebaseDatabase.getInstance().getReference("MyUsers").child(firebaseUser.getUid());
 
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
